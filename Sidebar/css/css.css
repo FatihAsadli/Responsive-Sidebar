@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --transition: 0.2s ease-in-out;
+}
+
+@media (min-width: 901px) {
+
+  .main {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 10px 30px 0px 0px;
+  }
+
+  .aside {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
+    transform: translate(-100%);
+    transition: var(--transition);
+  }
+
+  .show-aside {
+    transform: translate(0%);
+    transition: var(--transition);
+  }
+
+  .head {
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .close {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+  }
+
+  .fa-times {
+    font-size: 32px;
+    color: rgb(179, 12, 12);
+    transition: var(--transition);
+  }
+
+  .fa-times:hover {
+    color: rgb(255, 0, 0);
+  }
+
+  .fa-bars {
+    color: rgb(54, 141, 240);
+    transition: var(--transition);
+  }
+
+  .fa-bars:hover {
+    color: rgb(54, 141, 240, 0.7);
+  }
+
+  .brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(0, 132, 255), rgb(230, 227, 227));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: text-gradient 2.5s linear infinite;
+  }
+
+  @keyframes text-gradient {
+    from {
+      background-position: 200%;
+    }
+  }
+
+  .toggle-button {
+    width: auto;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+  }
+
+  i {
+    font-size: 42px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  li {
+    list-style: none;
+    letter-spacing: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  li:hover {
+    font-weight: bold;
+  }
+
+  .list {
+    margin-top: 40px;
+  }
+
+  .list li {
+    padding: 10px 20px;
+    font-size: 24px;
+    transition: var(--transition);
+  }
+
+  .list li:hover {
+    background-color: rgba(54, 141, 240, 0.315);
+    font-size: 20px;
+  }
+
+  .fab {
+    font-size: 34px;
+    color: rgb(54, 141, 240);
+    transition: var(--transition);
+  }
+
+  .fab:hover {
+    color: rgb(54, 141, 240, 0.7);
+  }
+
+  .ul2 {
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    display: flex;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 900px) {
+    
+    .main {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        padding: 10px 30px 0px 0px;
+      }
+    
+      .aside {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
+        transform: translate(-100%);
+        transition: var(--transition);
+        background-color: white;
+      }
+    
+      .show-aside {
+        transform: translate(0%);
+        transition: var(--transition);
+      }
+    
+      .head {
+        display: flex;
+        padding: 0px 20px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+    
+      .close {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: none;
+      }
+    
+      .fa-times {
+        font-size: 32px;
+        color: rgb(179, 12, 12);
+        transition: var(--transition);
+      }
+    
+      .fa-times:hover {
+        color: rgb(255, 0, 0);
+      }
+    
+      .fa-bars {
+        color: rgb(54, 141, 240);
+        transition: var(--transition);
+      }
+    
+      .fa-bars:hover {
+        color: rgb(54, 141, 240, 0.7);
+      }
+    
+      .brand {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 42px;
+        font-weight: bold;
+        background: linear-gradient(to right, rgb(0, 132, 255), rgb(230, 227, 227));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        animation: text-gradient 2.5s linear infinite;
+      }
+    
+      .toggle-button {
+        width: auto;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+      }
+    
+      i {
+        font-size: 42px;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+    
+      li {
+        list-style: none;
+        letter-spacing: 5px;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+    
+      li:hover {
+        font-weight: bold;
+      }
+    
+      .list {
+        margin-top: 40px;
+      }
+    
+      .list li {
+        padding: 10px 20px;
+        font-size: 24px;
+        transition: var(--transition);
+      }
+    
+      .list li:hover {
+        background-color: rgba(54, 141, 240, 0.315);
+        font-size: 20px;
+      }
+    
+      .fab {
+        font-size: 34px;
+        color: rgb(54, 141, 240);
+        transition: var(--transition);
+      }
+    
+      .fab:hover {
+        color: rgb(54, 141, 240, 0.7);
+      }
+    
+      .ul2 {
+        position: absolute;
+        bottom: 50px;
+        left: 60px;
+        display: flex;
+        gap: 20px;
+      }
+    
+      @keyframes text-gradient {
+        from {
+          background-position: 200%;
+        }
+      }
+}
